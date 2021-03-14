@@ -1,0 +1,50 @@
+<%- include("partials/header") -%>
+<div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fab fa-xing"></i></div>
+                    <div class="sidebar-brand-text mx-3"><span>Project x</span></div>
+                </a>
+                <div id="raw" display:"none">
+                    <% result.forEach(function(result) { %>
+                        <li><%= result.id %></li>
+                        <li><%= result.height %></li>
+                        <li><%= result.moisture %></li>
+                        <li><%= result.ha %></li>
+                        <li><%= result.ma %></li>
+                    <% }); %>
+                </div>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link home active" href="/"><i class="fa fa-home"></i><span>HOME</span></a></li>
+                    <li class="nav-item"><a class="nav-link d1" href="/dustbin/1"><i class="fa fa-trash"></i><span>Dustbin - 1</span></a></li>
+                    <li class="nav-item"><a class="nav-link d2" href="/dustbin/2"><i class="fa fa-trash"></i><span>Dustbin - 2</span></a></li>
+                    <li class="nav-item"><a class="nav-link d3" href="/dustbin/3"><i class="fa fa-trash"></i><span>Dustbin - 3</span></a></li>
+                    <li class="nav-item"><a class="nav-link d4" href="/dustbin/4"><i class="fa fa-trash"></i><span>Dustbin - 4</span></a></li>
+                    <li class="nav-item"><a class="nav-link d5" href="/dustbin/5"><i class="fa fa-trash"></i><span>Dustbin - 5</span></a></li>
+                    <li class="nav-item"><a class="nav-link d6" href="/dustbin/6"><i class="fa fa-trash"></i><span>Dustbin - 6</span></a></li>
+                    <li class="nav-item"><a class="nav-link d7" href="/dustbin/7"><i class="fa fa-trash"></i><span>Dustbin - 7</span></a></li>
+                    <li class="nav-item"><a class="nav-link d8" href="/dustbin/8"><i class="fa fa-trash"></i><span>Dustbin - 8</span></a></li>
+                    <li class="nav-item"><a class="nav-link post" href="/post"><i class="fa fa-send-o"></i><span>Post</span></a></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <h3 class="text-dark mb-4" style="margin: 20px 0;">Dustbin - 1</h3>
+                    </div>
+                </nav><img src="img/CC3.png">
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>Copyright © PROJECT X 2021</span></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+
+    <%- include("partials/footer") -%>
